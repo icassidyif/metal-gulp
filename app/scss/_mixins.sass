@@ -1,0 +1,21 @@
+=propToRem($prop, $px)
+  #{$prop} : $px*1px
+  #{$prop} : $px/16*1rem
+
+=breakpoint($point)
+  @if $point == desktop 
+    @media (min-width: 70em) //1120
+      @content
+  @else if $point == laptop 
+    @media (min-width: 64em) //1024
+     @content
+  @else if $point == tablet 
+    @media (min-width: 50em) //800
+      @content
+  @else if $point == phablet 
+    @media (min-width: 37.5em) //600
+      @content
+  @else if $point == mobileonly
+    @media (max-width: 37.5em) // --
+      @content
+

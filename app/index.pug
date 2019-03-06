@@ -1,0 +1,21 @@
+-var settings = {pageName: 'Главная'}
+-;
+doctype html
+html(lang="ru")
+  head
+    include includes/head.pug
+    include includes/mixins.pug
+  body
+    include includes/header.pug
+
+    .title 
+      h1 Прием металлолома
+    //- map -area
+    img(src="./img/question.png" usemap="#image-map")
+    map(name="image-map")
+      area(target="" alt="YES" title="YES" href="#" coords="0,136,133,215,275,139,144,79" shape="poly")
+      area(target="" alt="DONT-KNOW" title="DONT-KNOW" href="#" coords="179,56,319,1,451,58,308,133" shape="poly")
+      area(target="" alt="NO" title="NO" href="#" coords="343,135,482,80,613,139,473,213" shape="poly")
+
+    include includes/footer.pug
+    

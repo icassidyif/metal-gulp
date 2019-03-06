@@ -1,0 +1,31 @@
+{
+  "name": "gulp-base",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "serve": "gulp imgCopy && gulp jsBuild && gulp htmlBuild && gulp cssBuild && gulp default",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "gulp": "^4.0.0",
+    "gulp-changed": "^3.2.0",
+    "gulp-cleancss": "^0.2.2",
+    "gulp-debug": "^4.0.0",
+    "gulp-plumber-notifier": "0.0.3",
+    "gulp-pug": "^4.0.1",
+    "gulp-sass": "^4.0.2",
+    "gulp-sourcemaps": "^2.6.5",
+    "gulp-uglify-es": "^1.0.4",
+    "jquery": "^3.3.1",
+    "npm": "^6.8.0"
+  },
+  "devDependencies": {
+    "gulp-autoprefixer": "^6.0.0",
+    "gulp-browserify": "^0.5.1",
+    "gulp-server-livereload": "^1.9.2",
+    "gulp-uglify": "^3.0.1"
+  }
+}

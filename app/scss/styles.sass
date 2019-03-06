@@ -1,0 +1,39 @@
+*
+  margin: 0
+  padding: 0
+  box-sizing: border-box
+img
+  max-width: 100%  
+area
+  outline: none
+
+
+@import "vars";
+@import "mixins";
+body
+  font-family: Open Sans; 
+@import "grid";
+@import "icons";
+@import "header";
+// skype
+[href^="skype:"]
+  font-style: italic
+  text-decoration: none
+  &:before
+    content: ""
+    display: inline-block
+    vertical-align: middle
+    +propToRem(margin-right, 5)
+    background: url('../img/skype.png')
+    +propToRem(width, 18)
+    +propToRem(height, 18)
+// 
+
+.title
+  +propToRem(font-size, 10)
+  color: #575757
+  padding: 12px 0
+  border-bottom: 4px solid linear-gradient(top, $main-color, $main-color-lighter)
+
+@import "footer";
+

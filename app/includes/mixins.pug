@@ -1,0 +1,14 @@
+//- mixin showMenu(array)
+//-   ul
+//-     each item in array
+//-       li
+//-         a(href = item.link)= item.title
+//-         if(item.submenu)
+//-           +showMenu(item.submenu)
+
+//- mixin article(item)
+//-   .article.article_small
+//-     .wrapper
+//-       .article__date=item.date
+//-       .article__text=item.text 
+//-     img(src=item.img, alt="game")
