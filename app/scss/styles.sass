@@ -1,3 +1,5 @@
+@import "vars";
+@import "mixins";
 *
   margin: 0
   padding: 0
@@ -7,9 +9,9 @@ img
 area
   outline: none
 
+.m-b-step
+  margin-bottom: $v-step
 
-@import "vars";
-@import "mixins";
 body
   font-family: Open Sans; 
 @import "grid";
@@ -30,10 +32,23 @@ body
 // 
 
 .title
+  position: relative
   +propToRem(font-size, 10)
   color: #575757
   padding: 12px 0
-  border-bottom: 4px solid linear-gradient(top, $main-color, $main-color-lighter)
-
+  &:after
+    content: ''
+    position: absolute
+    width: 100%
+    height: 4px
+    bottom: 0
+    background: linear-gradient($main-color-lighter, $main-color)
 @import "footer";
 
+.question-block__title
+  +propToRem(font-size, 16)
+  color: #49628b
+  text-align: center
+  margin-bottom: $v-step
+  +breakpoint(laptop)
+    +propToRem(font-size, 22)
